@@ -1,7 +1,7 @@
 # Study Case
 ## Software Engineer
 
-0. read the [rules](https://github.com/helloproclub/preparation-task-se/blob/main/rules.md).
+0. read the [rules](https://github.com/helloproclub/preparation-task-se-2022/blob/main/rules.md).
 1. fork repo ini
 2. star repo ini :D
 3. buat folder baru sesuai nama kelompok (ex: kelompok_1)
