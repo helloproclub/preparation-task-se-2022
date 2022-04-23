@@ -1,0 +1,75 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booku</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo">Booku</a>
+        </div>
+    </div>
+
+    <section class="judul-container">
+        <h1>Katalog</h1>
+        <a href="/books/new" class="tambah-buku-btn">
+            <img src="images/add.svg" alt="Tambah Buku">
+            <span>
+                Tambah Buku
+            </span>
+        </a>
+    </section>
+
+    <% for (category of it.categories) { %>
+    <!-- If category is empty, skip -->
+    <% total = 0 %>
+    <% for (book of it.books) { %>
+    <% if (book.category === category) { %>
+    <% total = total + 1 %>
+    <% } %>
+    <% } %>
+    <% if (total == 0) { %>
+    <% continue %>
+    <% } %>
+
+    <section class="cat1">
+        <h2 class="cat-name"><%= category %></h2>
+        <div class="cat-container">
+
+            <!-- Display all the books in the category -->
+            <% for (book of it.books) { %>
+            <% if (book.category === category) { %>
+
+            <a class="card-link" href="/books/<%= book.id %>">
+                <div class="card">
+                    <!-- If the book has no cover, display a placeholder -->
+                    <% if (book.cover == "undefined" || book.cover == "") { %>
+                    <img src="https://via.placeholder.com/360x540?text=<%= book.title %>" alt="<%= book.title %>">
+                    <% } else { %>
+                    <img src="<%= book.cover %>" alt="<%= book.title %>">
+                    <% } %>
+                    <div class="card-container">
+                        <h3><%= book.title %></h3>
+                        <p><%= book.author %></p>
+                        <p><%= book.year %></p>
+                    </div>
+                </div>
+            </a>
+            <% } %>
+            <% } %>
+    </section>
+
+
+    <% } %>
+</body>
+
+</html>

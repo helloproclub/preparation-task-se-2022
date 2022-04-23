@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booku</title>
+    <link rel="stylesheet" href="../css/details.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="nav-container">
+            <a href="/books" class="back-btn">
+                <img src="../images/arrow-kembali.svg" alt="Kembali ke Halaman Sebelumnya">
+                <span>Kembali</span>
+            </a>
+        </div>
+    </div>
+
+    <section class="hero">
+        <div class="container">
+            <div>
+                <!-- If the book has no cover, display a placeholder -->
+                <% if (it.book.cover == "undefined" || it.book.cover == "") { %>
+                <img src="https://via.placeholder.com/360x540?text=<%= it.book.title %>" alt="<%= it.book.title %>">
+                <% } else { %>
+                <img src="<%= it.book.cover %>" alt="<%= it.book.title %>">
+                <% } %>
+
+                <h1><%= it.book.title %></h1>
+                <p><%= it.book.author %></p>
+                <p><%= it.book.year %></p>
+                <p><%= it.book.category %></p>
+            </div>
+            <a class="edit-btn" href="/books/<%= it.book._id %>/edit">Edit</a>
+
+            <form hidden id="deleteBook" method="post" action="/books/<%= it.book._id %>?_method=DELETE">
+            </form>
+            <a href="#" class="del-btn" onclick="document.getElementById('deleteBook').submit();">Delete</a>
+        </div>
+    </section>
+</body>
+
+</html>

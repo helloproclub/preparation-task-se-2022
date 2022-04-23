@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Montserrat:wght@300;400;700&display=swap");
+:root {
+  --primary: #57CDFF;
+}
+
+body {
+  background: #F9F9F9;
+  margin: 0;
+  font-family: 'Lato';
+}
+
+.navbar {
+  background: white;
+  padding: 1em;
+}
+
+.navbar .logo {
+  margin: 7.5em;
+  text-decoration: none;
+  font-weight: 800;
+  color: var(--primary);
+  font-size: 1.2em;
+}
+
+section {
+  margin: 5em 10em;
+}
+
+div.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  place-content: space-between;
+}
+
+div.container .left-col {
+  width: 40%;
+}
+
+div.container .left-col h1 {
+  font-size: 2em;
+  margin: 1em 0 .5em;
+}
+
+div.container .left-col p {
+  margin: 0 0 2em 0;
+  font-size: 1.3em;
+}
+
+div.container .left-col a {
+  display: inline-block;
+  padding: .7em 2em .7em 2em;
+  border-radius: .4em;
+  text-decoration: none;
+  background-color: var(--primary);
+  border: var(--primary);
+  color: white;
+  text-align: center;
+  font-size: 1em;
+}
+
+div.container .left-col a img {
+  margin: 0 0 0 1em;
+  width: 18px;
+}
+
+div.container .ilustrasi {
+  width: 30%;
+  margin-right: 5em;
+  margin-top: -2em;
+}
+
+p.kosong {
+  font-size: 1em;
+  color: #9D9D9D;
+  margin: .5em 0 0 10em;
+  display: none;
+}
+
+section.judul-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1em 10em 0;
+}
+
+section.judul-container h1 {
+  font-weight: 800;
+  margin-right: 2em;
+}
+
+section.judul-container a {
+  text-decoration: none;
+  color: black;
+}
+
+section.judul-container a img {
+  width: 15px;
+}
+
+section.cat1, section.cat2, section.cat3 {
+  margin-top: 0;
+  margin-bottom: 2em;
+}
+
+section.cat1 .cat-name, section.cat2 .cat-name, section.cat3 .cat-name {
+  font-size: 1em;
+}
+
+section.cat1 a.card-link, section.cat2 a.card-link, section.cat3 a.card-link {
+  color: black;
+  text-decoration: none;
+}
+
+section.cat1 .cat-container, section.cat2 .cat-container, section.cat3 .cat-container {
+  margin: 0 1em 1em 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1em;
+}
+
+section.cat1 .cat-container img, section.cat2 .cat-container img, section.cat3 .cat-container img {
+  width: 130px;
+  height: 130px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+section.cat1 .cat-container .card, section.cat2 .cat-container .card, section.cat3 .cat-container .card {
+  width: 130px;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  font-size: .8em;
+}
+
+section.cat1 .cat-container .card h3, section.cat1 .cat-container .card p, section.cat2 .cat-container .card h3, section.cat2 .cat-container .card p, section.cat3 .cat-container .card h3, section.cat3 .cat-container .card p {
+  margin: .3em;
+}
+
+section.cat1 .cat-container .card .card-container, section.cat2 .cat-container .card .card-container, section.cat3 .cat-container .card .card-container {
+  padding: 1em;
+}
+
+@media only screen and (max-width: 904px) {
+  .navbar .logo {
+    margin: 4em;
+  }
+  div.container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  div.container .ilustrasi {
+    width: 200px;
+    margin-bottom: .2em;
+  }
+  div.container div.left-col {
+    width: 100%;
+  }
+  div.container div.left-col h1 {
+    font-size: 1.5em;
+  }
+  div.container div.left-col p {
+    font-size: 1.2em;
+  }
+  div.container div.left-col a.button {
+    font-size: 1em;
+    padding: 1em;
+  }
+  section {
+    margin-left: 5.8em;
+  }
+  section.judul-container {
+    margin-left: 5.8em;
+    margin-right: 1em;
+  }
+  section.cat1, section.cat2, section.cat3 {
+    margin-right: 1em;
+  }
+  section.cat1 .cat-container img, section.cat2 .cat-container img, section.cat3 .cat-container img {
+    width: 120px;
+    height: 120px;
+  }
+  section.cat1 .cat-container .card, section.cat2 .cat-container .card, section.cat3 .cat-container .card {
+    font-size: .8em;
+    width: 120px;
+  }
+  section.cat1 .cat-container .card h3, section.cat2 .cat-container .card h3, section.cat3 .cat-container .card h3 {
+    margin: 0;
+  }
+  section.cat1 .cat-container .card .card-container, section.cat2 .cat-container .card .card-container, section.cat3 .cat-container .card .card-container {
+    padding: 1em;
+  }
+  section.cat1 .cat-container .card .card-container h3, section.cat1 .cat-container .card .card-container p, section.cat2 .cat-container .card .card-container h3, section.cat2 .cat-container .card .card-container p, section.cat3 .cat-container .card .card-container h3, section.cat3 .cat-container .card .card-container p {
+    margin: .3em;
+  }
+}
+/*# sourceMappingURL=main.css.map */

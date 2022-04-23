@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booku</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo">Booku</a>
+        </div>
+    </div>
+
+    <section class="hero">
+        <div class="container">
+            <div class="left-col">
+                <h1>Simpan Katalog Bukumu dengan Mudah disini!</h1>
+                <p>Langsung aja cobain brodi</p>
+                <a class="button" href="/books">Buat Katalog
+                    <span>
+                        <img src="images/arrow-up.svg" alt="Panah ke Kanan">
+                    </span>
+                </a>
+            </div>
+
+            <img class="ilustrasi" src="images/ilustration.svg" alt="Gambar ilustrasi">
+        </div>
+    </section>
+</body>
+
+</html>
