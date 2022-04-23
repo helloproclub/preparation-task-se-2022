@@ -20,6 +20,11 @@
 4. Mongo DB as database
 5. Eta as templating engine
 
+## How to use
+
+1. Run `npm install` to install dependencies
+2. Run `npm start` to start the app
+
 ## Repository
 
 1. [Booku](https://github.com/mufidu/booku)
