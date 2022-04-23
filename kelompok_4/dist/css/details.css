@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Montserrat:wght@300;400;700&display=swap");
+:root {
+  --primary: #57CDFF;
+}
+
+body {
+  background: #F9F9F9;
+  margin: 0;
+  font-family: 'Lato';
+}
+
+.navbar {
+  padding: 1em;
+  margin-bottom: 0;
+}
+
+.navbar .back-btn {
+  margin: 7.5em;
+  -webkit-text-decoration: underline 1px;
+          text-decoration: underline 1px;
+  text-underline-offset: 10px;
+  font-weight: lighter;
+  color: var(--primary);
+  font-size: 1.2em;
+}
+
+.navbar .back-btn img {
+  padding-top: 1em;
+  margin-right: 1em;
+  width: 15px;
+  color: var(--primary);
+}
+
+div.container {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  text-align: center;
+}
+
+div.container h1.judul-detail {
+  margin-top: 0;
+  font-weight: 900;
+}
+
+div.container img {
+  width: 200px;
+  height: 200px;
+}
+
+div.container div {
+  margin-bottom: 2em;
+}
+
+div.container a.edit-btn {
+  background-color: #57CDFF;
+  border: #57CDFF;
+  border-radius: .3em;
+  color: white;
+  padding: 10px 50px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+div.container a.del-btn {
+  background-color: #FF5757;
+  border: #FF5757;
+  border-radius: .3em;
+  color: white;
+  padding: 10px 40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+div.container input {
+  width: 100%;
+  padding: .5em;
+  margin-bottom: 1em;
+  border: 1px solid #CECECE;
+}
+
+div.container label {
+  display: block;
+  text-align: left;
+  width: 100%;
+  margin-bottom: -.8em;
+  color: #8C8C8C;
+}
+
+div.container select {
+  display: block;
+  padding: .5em;
+  width: 103%;
+  background-color: white;
+  border: 1px solid #CECECE;
+}
+
+div.container input.submit {
+  width: 103%;
+  background-color: var(--primary);
+  border: var(--primary);
+  border-radius: .3em;
+  color: white;
+  padding: 10px 50px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 904px) {
+  h1.judul-detail {
+    padding-top: .5em;
+    text-align: left;
+  }
+  div.navbar a.back-btn {
+    margin-left: 4em;
+  }
+  div.container img {
+    margin-top: 1em;
+    width: 150px;
+    height: 150px;
+  }
+  div.container h1, div.container p {
+    margin: .5em;
+  }
+  div.container a.edit-btn {
+    margin-bottom: .5em;
+  }
+}
+/*# sourceMappingURL=details.css.map */

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booku</title>
+    <link rel="stylesheet" href="../css/details.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="nav-container">
+            <a href="/books" class="back-btn">
+                <img src="../images/arrow-kembali.svg" alt="Kembali ke Halaman Sebelumnya">
+                <span>Kembali</span>
+            </a>
+        </div>
+    </div>
+
+    <section class="hero">
+        <div class="container">
+            <h1 class="judul-detail">Isi Detail Buku</h1>
+            <form action="/books/" method="POST">
+                <label for="title">Judul Buku</label><br>
+                <input type="text" id="title" name="title"><br>
+
+                <label for="author">Nama Penulis</label><br>
+                <input type="text" id="author" name="author"><br>
+
+                <label for="year">Tahun Terbit</label><br>
+                <input type="number" id="year" name="year"><br>
+
+                <label for="category">Kategori</label><br>
+                <select name="category" id="category">
+                    <option value="">Select a category</option>
+                    <% for (category of it.categories) { %>
+                    <option value="<%= category %>"><%= category %>
+                    </option>
+                    <% } %>
+                </select><br>
+
+                <label for="cover">Link Gambar</label><br>
+                <input type="text" id="cover" name="cover"><br>
+
+                <input class="submit" type="submit" value="Submit">
+            </form>
+        </div>
+    </section>
+</body>
+
+</html>
