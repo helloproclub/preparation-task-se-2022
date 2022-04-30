@@ -45,7 +45,7 @@
  <h2> Contributors </h2>
   <li> <a href="https://github.com/elnbillie">Muhammad Billie Elian</a> </li>
   <li> <a href="https://github.com/rin4th">Rizal Nur</a> </li>
-  <li> <a href="https://github.com/UseinAkbarurl">Usein Akbar</a> </li>
+  <li> <a href="https://github.com/UseinAkbar">Usein Akbar</a> </li>
  
  <h2> API Documentation </h2>
  <a href="https://documenter.getpostman.com/view/20600602/UyrGAtxT">Link Postman Dokumentasi</a>
