@@ -47,5 +47,7 @@
   <li> <a href="https://github.com/rin4th">Rizal Nur</a> </li>
   <li> <a href="https://github.com/UseinAkbarurl">Usein Akbar</a> </li>
  
+ <h2> API Documentation </h2>
+ <a href="https://documenter.getpostman.com/view/20600602/UyrGAtxT">Link Postman Dokumentasi</a>
  <h2> Link Video </h2>
  <a href="https://drive.google.com/drive/folders/1qFn4YI4KTBwMl8-Q-0yqEdmQQFacSPza?usp=sharing">Link Video</a>
