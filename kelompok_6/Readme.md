@@ -33,6 +33,7 @@
     <li> Django </li>
     <li> rest_framework </li>
     <li> corsheaders </li>
+    <li> SQLite </li>
   </ul>
   </p>
  
