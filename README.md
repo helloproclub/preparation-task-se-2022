@@ -7,3 +7,6 @@
 
 ## Link Postman ##
 https://documenter.getpostman.com/view/20640011/UyrDDbMc
+
+## Link Penjelasan ##
+https://youtu.be/_xxAtgFqd1k
