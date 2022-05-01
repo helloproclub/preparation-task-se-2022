@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stories.</title>
+    <link rel="stylesheet" href="./style/show.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Besley&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="max-width">
+            <div class="logo">
+                <a href="index.html"><span class="logo-span" id="logo-span">Stories.</span></a>
+            </div>
+            <ul id="nav-menu" class="nav-menu">
+                <li><a href="menu.html" class="nav-link menu-btn" id="about-link">Stories</a></li>
+                <li><a href="#about" class="nav-link menu-btn" id="explore-link">About Us</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="max-width">
+        <div class="btn-wrapper">
+            <button id="edit">
+                <a id="btn-edit">edit</a>
+            </button>
+            <button id="delete">
+                <a id="btn-delete">delete</a>
+            </button>
+        </div>
+        <div class="show-wrapper"></div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+            showDetails();
+            var articleId = getArticleId();
+
+            $('#btn-edit').attr('href', 'form.html?id=' + articleId);
+
+             /* Delete Article */
+            $('#delete').click(function(){
+                if (confirm('Apakah anda yakin ingin menghapusnya?')){
+                    fetch('https://preparationtask.herokuapp.com/api/articles/' + articleId, {
+                        method: 'DELETE'
+                    })
+                    .then(response => response.json())
+                    .then(response => {
+                        alert(response.message);
+                        document.location.href = 'menu.html';
+                    });
+                }
+            })
+        });
+    </script>
+</body>
+
+</html>

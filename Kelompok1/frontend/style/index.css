@@ -1,0 +1,181 @@
+/* Base/Default */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #F1F4F9;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Besley', sans-serif;
+}
+
+.max-width {
+  max-width: 1300px;
+  padding: 0 8.33%;
+  margin: auto;
+}
+
+/* Header */
+
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  background-color: #F1F4F9;
+  transition: 0.3s;
+}
+
+.header .max-width {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .logo {
+  padding: 20px 0;
+}
+
+.header .logo a {
+  font-family: 'Besley', serif;
+  font-size: 2em;
+  letter-spacing: 1px;
+  color: #000;
+  text-decoration: none;
+}
+
+.header .nav-menu {
+  list-style: none;
+  text-align: center;
+}
+
+.header .nav-menu li {
+  display: inline-block;
+}
+
+.header .nav-menu .nav-link {
+  font-size: 1.25em;
+  text-decoration: none;
+  color: #000;
+  white-space: nowrap;
+  margin-left: 20px;
+  padding: 20px 0;
+}
+
+.header .link-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/* Home */
+
+.home {
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 300px 0;
+}
+
+.container {
+  display: flex;
+}
+
+.left-side {
+  width: 60%;
+}
+
+.left-side img {
+  width: 90%;
+}
+
+.right-side {
+  width: 40%;
+  margin: auto;
+}
+
+.button {
+  font-family: 'Besley', serif;
+  padding: 10px;
+  margin: 0 0 10px 6px;
+  border-radius: 50px;
+  border: none;
+  background-color: white;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.button a {
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+  color: black;
+}
+
+.button:hover {
+  color: black;
+  background-color: #a9caff;
+}
+
+h2 {
+  font-weight: 200;
+}
+
+.home p {
+  margin: 10px 0 20px 0;
+}
+
+/* About Us */
+
+.us {
+  height: 80vh;
+  text-align: center;
+}
+
+.card-wrapper {
+  display: flex;
+}
+
+.us h3{
+  font-weight: normal;
+  background-color: transparent;
+}
+
+.us p {
+  background-color: transparent;
+}
+
+.card-wrapper {
+  width: 100%;
+  margin: 50px auto;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.card {
+  height: 450px;
+  width: 300px;
+  margin-bottom: 30px;
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.us img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 80px auto 0 auto;
+  background-size: cover;
+  background-position: center;
+}
+
+.card .motto {
+  margin: 18px;
+}

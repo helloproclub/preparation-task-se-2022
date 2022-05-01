@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stories.</title>
+    <link rel="stylesheet" href="./style/form.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Besley&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="max-width">
+            <div class="logo">
+                <a href="index.html"><span class="logo-span" id="logo-span">Stories.</span></a>
+            </div>
+            <ul id="nav-menu" class="nav-menu">
+                <li><a href="menu.html" class="nav-link menu-btn" id="about-link">Stories</a></li>
+                <li><a href="#about" class="nav-link menu-btn" id="explore-link">About Us</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <div class="form max-width">
+            <form method="POST" id="formArticle" enctype="multipart/form-data">
+
+                <label class="title">Thumbnail:</label>
+                <input type="file" class="form-input first" name="thumbnail" id="thumbnail">
+
+                <label class="title">Title:</label>
+                <input type="text" class="form-input" name="title" id="title">
+
+                <label class="title">Description:</label>
+                <input type="text" class="form-input" name="description">
+
+                <label class="title">Author:</label>
+                <input type="text" class="form-input" name="author">
+
+
+                <label class="title">Content:</label>
+                <textarea type="text" class="form-input" name="content"></textarea>
+
+                <button type="submit">Post</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            var articleId = getArticleId();
+
+            if (articleId) { /* Update Article */
+                $.ajax({
+                    url: 'https://preparationtask.herokuapp.com/api/articles/' + articleId,
+                    success: function (data) {
+                        // Set response data kedalam masing-masing inputan
+                        $('input[name=title]').val(data.data.title);
+                        $('input[name=author]').val(data.data.author);
+                        $('input[name=description]').val(data.data.description);
+                        $('textarea[name=content]').val(data.data.content);
+                    }
+                })
+
+                $('#formArticle')
+                    .submit(function (e) {
+                        e.preventDefault();
+
+                        var formData = new FormData(this);
+                        var fileInput = document.getElementById('thumbnail');
+                        var title = document.getElementsById('title');
+
+                        // Jika tidak ada file yang dipilih, maka jangan kirimkan thumbnail
+                        if (fileInput.files.length == 0) {
+                            formData.delete('thumbnail');
+                        }
+
+                        $.ajax({
+                            url: 'https://preparationtask.herokuapp.com/api/articles/' + articleId,
+                            type: 'PUT',
+                            data: formData,
+                            processData: false,
+                            contentType: false,
+                            success: function (result) {
+                                alert(result.message);
+                                document.location.href = 'menu.html'
+                            },
+                            error: function (e) {
+                                alert('Maaf artikel gagal ditambahkan');
+                            }
+                        });
+                    });
+            } else {  /* Create Article */
+                $('#formArticle')
+                    .submit(function (e) {
+                        $.ajax({
+                            url: 'https://preparationtask.herokuapp.com/api/articles',
+                            type: 'POST',
+                            data: new FormData(this),
+                            processData: false,
+                            contentType: false,
+                            success: function (result) {
+                                alert(result.message);
+                                document.location.href = 'menu.html'
+                            },
+                            error: function (e) {
+                                alert('Maaf artikel gagal ditambahkan');
+                            }
+                        });
+                        e.preventDefault();
+                    });
+            }
+
+        })
+    </script>
+</body>
+
+</html>
