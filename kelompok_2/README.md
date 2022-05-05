@@ -16,7 +16,7 @@
 
 ### Sinopsis Page
 
-![](./screenshots/sinopsis.png)
+![](./screenshots/sinopsis.PNG)
 
 ### Login Page
 
