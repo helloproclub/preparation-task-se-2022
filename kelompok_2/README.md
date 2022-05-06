@@ -39,13 +39,13 @@
 
 ## Repository
 
-1. [Front End](https://github.com/)
+1. [Front End](https://github.com/azizahcahya/movie-fe)
 1. [Back End](https://github.com/Nafidinara/movie-api)
 
 ## Contributors
 
 1. Alfara Nafi Dinara ([Nafidinara](https://github.com/Nafidinara))
-1. Azizah Cahya Kemila([x](https://github.com/))
+1. Azizah Cahya Kemila([x](https://github.com/azizahcahya))
 1. Zaidan Ibnusabil ([x](https://github.com/))
 
 ## API Documentation
